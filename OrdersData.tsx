@@ -1,11 +1,10 @@
 import OrdersTable from './OrdersTable';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React, { FC } from 'react';
 
+const queryClient: QueryClient = new QueryClient();
 
-const queryClient = new QueryClient();
-
-
-function OrdersData() {
+const OrdersData: FC = () => {
   return (
     <QueryClientProvider client={queryClient}>      
       <OrdersTable />
